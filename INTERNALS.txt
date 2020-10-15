@@ -1,0 +1,21 @@
+=== push buttons ===
+These DBY button are supported:
+* DBY23510
+* DBY23520
+* DBY23610
+* DBY23710 tested
+
+Note that the DBY25xxx series operates on a different frequency (868.4MHz) and is not supported (yet).
+
+=== chimes ===
+At this moment, activating a chime is not supported.
+
+=== advanced ===
+The internal sound selector button generates another 2 codes, but can only be operated by opening the pushbutton shell.
+
+=== protocol ===
+The (supported) Byron DBY series push buttons and chimes use the 433MHz-based protocol. It uses a simple message consisting of 32 bits for the push button identification. This gives 4.294.967.296 possible IDs.
+
+=== help ===
+Please tell me when you have a Byron DBY device that is not listed here.
+Please tell me when you have a Byron DBY device that is properly working with Homey, but which is not yet marked as 'tested' here.

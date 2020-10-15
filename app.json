@@ -1,0 +1,96 @@
+{
+	"id": "com.dondorp.homey.byrondby",
+	"version": "1.0.0",
+	"compatibility": ">=1.5.0",
+	"sdk": 2,
+	"name": {
+		"nl": "Byron DBY Deurbel",
+		"en": "Byron DBY Doorbell"
+	},
+	"description": {
+		"nl": "Geeft ondersteuning voor Byron DBY deurbellen.",
+		"en": "Adds support for Byron DBY Doorbells."
+	},
+	"category": [
+		"appliances"
+	],
+	"permissions": [
+		"homey:wireless:433"
+	],
+	"keywords": [
+		"doorbell",
+		"deurbel",
+		"Byron",
+		"DBY"
+	],
+	"images": {
+		"large": "/assets/images/large.png",
+		"small": "/assets/images/small.png"
+	},
+	"author": {
+		"name": "Erwin Dondorp",
+		"email": "byrondby@dondorp.com"
+	},
+	"bugs": {
+		"url": "https://github.com/erwindon/com.dondorp.homey.byrondby/issues"
+	},
+	"source": "https://github.com/erwindon/com.dondorp.homey.byrondby",
+	"support": "mailto:byrondby@dondorp.com",
+	"drivers": [
+		{
+			"id": "ByronDbyButton",
+			"name": {
+				"en": "Byron DBY Button",
+				"nl": "Byron DBY Knop"
+			},
+			"images": {
+				"large": "/drivers/ByronDbyButton/assets/images/large.png",
+				"small": "/drivers/ByronDbyButton/assets/images/small.png"
+			},
+			"_comment": "Don't use class/capability 'button', this will make the Homey pretend it can push that button",
+			"class": "other",
+			"capabilities": []
+		}
+	],
+	"signals": {
+		"433": {
+			"ByronDbySignal": {
+	"sof": [],
+				"eof": [ 520, 7130 ],
+				"words": [
+		[ 1545, 534 ],
+		[ 502, 1540 ]
+				],
+				"interval": 1028,
+				"sensitivity": 0.1,
+				"repetitions": 20,
+				"minimalLength": 32,
+				"maximalLength": 32
+			}
+		}
+	},
+	"flow": {
+		"triggers": [
+			{
+				"id": "receive_signal_generic",
+				"title": {
+					"en": "A doorbell is pressed",
+					"nl": "Een deurbel is ingedrukt"
+				},
+				"tokens": [
+					{
+						"name": "buttonId",
+						"type": "number",
+						"title": {
+							"en": "buttonId",
+							"nl": "drukkerId"
+						},
+						"example": 121
+					}
+				]
+			}
+		],
+		"actions": [
+			]
+	}
+}
