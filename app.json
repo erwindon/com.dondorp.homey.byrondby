@@ -2,7 +2,7 @@
 	"id": "com.dondorp.homey.byrondby",
 	"version": "1.0.1",
 	"compatibility": ">=1.5.0",
-	"sdk": 2,
+	"sdk": 3,
 	"brandColor": "#123456",
 	"name": {
 		"nl": "Byron DBY Deurbel",
