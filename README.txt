@@ -1,3 +1,5 @@
+THIS PROJECT HAS BEEN ABANDONNED
+
 Homey app to receive signals from Byron DBY doorbell pushbuttons.
 
 Most push buttons from the DBY series are supported.
